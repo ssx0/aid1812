@@ -1,0 +1,332 @@
+/* 页面基础样式 */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+body{
+	font:12px youyuan,Arial;
+	color:#ccc;
+	background:#F1F3F4;
+	padding-top:50px;
+}
+a{
+	color:#ccc;
+	text-decoration:none;
+}
+input:focus{
+	outline:none;
+}
+/* 外部容器样式 */
+#container{
+	width:1000px;
+	margin:0 auto;
+}
+/* 1. 顶部 */
+#top{
+	height:50px;
+}
+#logo,#search{
+	float:left;
+}
+#top-nav{
+	float:right;
+}
+/* 顶部logo */
+#logo img{
+	width:168px;
+	border-radius:10px;
+}
+#search{
+	margin-left:113px;
+	position:relative;
+}
+#search input{
+	width:380px;
+	height:36px;
+	border:1px solid #999;
+	border-radius:18px;
+	padding:0 10px;
+	background:#f5f5f5;
+}
+#search a{
+	position:absolute;
+	top:0;
+	right:0;
+}
+#search img{
+	width:38px;
+	height:38px;
+}
+/* 顶部导航 */
+#top-nav{
+	margin-top:5px;
+}
+#top-nav li{
+	float:left;
+	height:30px;
+	line-height:30px;
+}
+#top-nav b{
+	border-left:1px solid #ccc;
+	margin:0 15px;
+}
+#top-nav img{
+	vertical-align:middle;
+}
+/* 2. 首页导航 */
+#nav{
+	overflow:hidden;
+	margin:10px 0;
+	font-size:16px;
+}
+#nav li{
+	float:left;
+	margin-right:40px;
+}
+/* 3. banner */
+#banner{
+	height:400px;
+	position:relative;
+}
+#banner img{
+	width:100%;
+	display:none;
+}
+#banner img:first-child{
+	display:block;
+}
+#banner ul{
+	position:absolute;
+	left:50%;
+	bottom:12px;
+	margin-left:-50px;
+}
+#banner li{
+	float:left;
+	height:12px;
+	width:12px;
+	background:#fff;
+	border-radius:50%;
+	margin:4px;
+}
+#banner li:first-child{
+	background:gray;
+}
+#banner a{
+	position:absolute;
+	top:50%;
+	width:35px;
+	height:70px;
+	margin-top:-35px;
+	border-radius:5px;
+}
+#banner .prev{
+	left:5px;
+	background:rgba(0,0,0,.1) url("../images/index/arrow-left.png") no-repeat center;
+}
+#banner .next{
+	right:5px;
+	background:rgba(0,0,0,.1) url("../images/index/arrow-right.png") no-repeat center;
+}
+/* 4. 推荐 */
+#recommend{
+	margin:10px 0;
+	height:240px;
+}
+#recommend div{
+	float:left;
+	margin-right:10px;
+	width:326px;
+	height:240px;
+}
+.commend1{
+	background:url("../images/index/sbanner1.jpg");
+}
+.commend1 img{
+	width:130px;
+	float:right;
+	margin-top:50px;
+	margin-right:40px;
+}
+.commend2{
+	background:url("../images/index/sbanner2.jpg");
+}
+.commend2 img{
+	width:230px;
+	margin-left:40px;
+	margin-top:40px;
+}
+#recommend .commend3{
+	margin:0;
+	background:url("../images/index/sbanner3.jpg");
+}
+.commend3 img{
+	width:160px;
+	margin-left:40px;
+	margin-top:40px;
+}
+#recommend img{
+/* 过渡效果 */
+	transition:1s;
+}
+#recommend img:hover{
+/* 转换属性：缩放函数 */
+	transform:scale(1.1);
+}
+/* 5. 横幅 */
+#wrapper{
+	height:370px;
+	background:url("../images/index/index_guild.jpg");
+	background-size:1000px;
+	margin-bottom:40px;	
+}
+/* 6. 主体 */
+#main{
+	
+}
+#main .item-type{
+	overflow:hidden;
+	margin-top:15px;
+}
+.item-type>p{
+	font:bold 24px "微软雅黑";
+	color:#333;
+	margin-bottom:12px;
+}
+.item-type>p>a{
+	color:#f0f0f0;
+	font-size:14px;
+	background:#333;
+	margin-left:20px;
+	padding:2px 5px;
+}
+.item1{
+	float:left;
+	width:615px;
+	height:380px;
+	background:#e8e8e8;
+}
+.item2,.item3{
+	float:right;
+	width:375px;
+	height:185px;
+	background:#e8e8e8;
+}
+.item2{
+	margin-bottom:10px;
+}
+.item1 img{
+	float:right;
+	width:230px;
+	margin-top:60px;
+	margin-right:50px;
+}
+.item1 .brand{
+	font:bold 24px "微软雅黑";
+	color:#333;
+	margin-top:95px;
+	margin-left:55px;
+}
+.subtitle{
+	font-size:14px;
+	color:#333;
+	margin-top:20px;
+	margin-bottom:15px;
+}
+.price{
+	font:bold 14px youyuan;
+	color:#6E5557;
+}
+.detail{
+	width:132px;
+	height:24px;
+	background:#6E5557;
+	color:#fff;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	line-height:24px;
+}
+.item1 .subtitle{
+	margin-left:58px;
+}
+.item1 .price,.item1 .detail{
+	margin-left:120px;
+	margin-bottom:15px;
+}
+.item2 img{
+	width:180px;
+	float:right;
+	margin-top:20px;
+	margin-right:10px;
+}
+.item3 img{
+	width:100px;
+	float:right;
+	margin-top:25px;
+	margin-right:30px;
+}
+.item2 .subtitle,.item3 .subtitle{
+	margin-top:30px;
+	margin-left:30px;
+}
+.item2 .price,.item3 .price{
+	margin-top:10px;
+	margin-left:32px;
+}
+.item2 .detail,.item3 .detail{
+	margin-top:20px;
+	margin-left:30px;
+}
+/* 7. 页面底部 */
+#footer{
+	height:80px;
+	margin-top:50px;
+}
+#footer div{
+	float:left;
+	margin:0 95px;
+	text-align:center;
+}
+/* 8. 共用底部 */
+#bottom{
+	margin-top:30px;
+}
+.download{
+	float:right;
+}
+.download img{
+	width:100px;
+}
+.service{
+	float:right;
+	width:125px;
+	margin-right:10px;
+}
+.service p{
+	font-size:14px;
+	text-align:center;
+	margin-bottom:10px;
+	color:#333;
+}
+.service img:last-child{
+	margin-top:3px;
+}
+#footLogo{
+	width:168px;
+	border-radius:10px;
+}
+#footFont{
+	width:650px;
+}
+
+
+
+
+
+
+
+
+
+

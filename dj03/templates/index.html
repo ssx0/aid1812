@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  {% block title %}
+  <title>Document</title>
+  {% endblock %}
+  {% block style %}
+  <link rel="stylesheet" href="../css/index.css" type="text/css">
+  {% endblock %}
+  <script src="../js/jquery-1.11.3.js"></script>
+  {% block js %}
+  <script src="../js/index.js"></script>
+  {% endblock %}
+</head>
+ <body>
+	<div id="container">
+		<!--1. 页面顶部-->
+		<div id="top">
+			<!--左中右三列布局-->
+			<div id="logo">
+				<a href="index.html">
+					<img src="../images/header/logo.png">
+				</a>
+			</div>
+			<div id="search">
+				<input type="text" name="search" placeholder="请输入您要搜索内容">
+				<a href="javascript:void(0)">
+					<img src="../images/header/search.png">
+				</a>
+			</div>
+			<div id="top-nav">
+				<ul>
+					<li>
+						<a href="">
+							<img src="../images/header/care.png">
+						</a>						
+					</li>
+					<li>
+						<b></b>
+						<a href="">
+							<img src="../images/header/order.png">
+						</a>
+						
+					</li>
+					<li>
+						<b></b>
+						<a href="">
+							<img src="../images/header/shop_car.png">
+						</a>
+					</li>
+					<li>
+						<b></b>
+						<a href="">帮助</a>
+					</li>
+					<li>
+						<b></b>
+						<a href="login.html">登录</a>
+					</li>
+				
+				</ul>
+			</div>
+		
+		
+		</div>
+		
+		<!--2. 导航-->
+		<div id="nav">
+			<ul>
+				<li>
+					<a href="index.html">首页</a>
+				</li>
+				<li>
+					<a href="">私人订制</a>
+				</li>
+			</ul>
+		
+		</div>
+		
+		<!--3. 轮播图-->
+		{% block main %}
+		<div id="banner">
+			<div>
+				<img src="../images/index/index_banner1.jpg">
+				<img src="../images/index/index_banner2.jpg">
+				<img src="../images/index/index_banner3.jpg">
+				<img src="../images/index/index_banner4.jpg">
+				<img src="../images/index/index_banner5.jpg">
+			</div>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<a href="javascript:void(0)" class="prev">
+				<!-- <img src="../images/index/arrow-left.png"> -->
+			</a>
+			<a href="javascript:void(0)" class="next"></a>	
+		</div>
+		
+		<!--4. 推荐-->
+		<div id="recommend">
+			<div class="commend1">
+				<a href="">
+					<img src="../images/index/index_Sbanner_img1.png">
+				</a>
+			</div>
+			<div class="commend2">
+				<a href="">
+					<img src="../images/index/index_Sbanner_img2.png">
+				</a>
+			</div>
+			<div class="commend3">
+				<a href="">
+					<img src="../images/index/index_Sbanner_img3.png">
+				</a>
+			</div>	
+		</div>
+
+		<!--5. 横幅-->
+		<div id="wrapper"></div>
+
+		<!--6. 页面主体-->
+		<div id="main">
+			<div class="item-type">
+				<!--顶部标题-->
+				<p>
+					背包
+					<a href="">更多>></a>
+				</p>
+				<!--商品展示-->
+				<div>
+					<div class="item1">
+						<img src="../images/index/index_bp1.png">
+						<p class="brand">
+							U'REVO
+						</p>
+						<p class="subtitle">活力学院休闲双肩包</p>
+						<p class="price">限时特惠 &yen;6688.00</p>
+						<p class="detail">查看详情</p>
+					
+					</div>
+					<div class="item2">
+						<img src="../images/index/index_bp2.png">
+						<p class="subtitle">牛津休闲双肩包</p>
+						<p class="price">&yen;6688.00</p>
+						<p class="detail">查看详情</p>
+					</div>
+					<div class="item3">
+						<img src="../images/index/index_Sbanner_img1.png">
+						<p class="subtitle">90分行李箱</p>
+						<p class="price">&yen;6688.00</p>
+						<p class="detail">查看详情</p>
+					</div>
+				</div>
+			
+			</div>
+			<div class="item-type">
+				<!--顶部标题-->
+				<p>
+					背包
+					<a href="">更多>></a>
+				</p>
+				<!--商品展示-->
+				<div>
+					<div class="item1">
+						<img src="../images/index/index_bp1.png">
+						<p class="brand">
+							U'REVO
+						</p>
+						<p class="subtitle">活力学院休闲双肩包</p>
+						<p class="price">限时特惠 &yen;6688.00</p>
+						<p class="detail">查看详情</p>
+					
+					</div>
+					<div class="item2">
+						<img src="../images/index/index_bp2.png">
+						<p class="subtitle">牛津休闲双肩包</p>
+						<p class="price">&yen;6688.00</p>
+						<p class="detail">查看详情</p>
+					</div>
+					<div class="item3">
+						<img src="../images/index/index_Sbanner_img1.png">
+						<p class="subtitle">90分行李箱</p>
+						<p class="price">&yen;6688.00</p>
+						<p class="detail">查看详情</p>
+					</div>
+				</div>
+			
+			</div>
+			<div class="item-type">
+				<!--顶部标题-->
+				<p>
+					背包
+					<a href="">更多>></a>
+				</p>
+				<!--商品展示-->
+				<div>
+					<div class="item1">
+						<img src="../images/index/index_bp1.png">
+						<p class="brand">
+							U'REVO
+						</p>
+						<p class="subtitle">活力学院休闲双肩包</p>
+						<p class="price">限时特惠 &yen;6688.00</p>
+						<p class="detail">查看详情</p>
+					
+					</div>
+					<div class="item2">
+						<img src="../images/index/index_bp2.png">
+						<p class="subtitle">牛津休闲双肩包</p>
+						<p class="price">&yen;6688.00</p>
+						<p class="detail">查看详情</p>
+					</div>
+					<div class="item3">
+						<img src="../images/index/index_Sbanner_img1.png">
+						<p class="subtitle">90分行李箱</p>
+						<p class="price">&yen;6688.00</p>
+						<p class="detail">查看详情</p>
+					</div>
+				</div>
+			
+			</div>
+		
+		
+		
+		
+		
+		</div>
+		{% endblock %}
+		<!--7. 页面底部-->
+		<div id="footer">
+			<div>
+				<img src="../images/footer/icon1.png">
+				<p>品质保障</p>
+			</div>
+			<div>
+				<img src="../images/footer/icon2.png">
+				<p>品质保障</p>
+			</div>
+			<div>
+				<img src="../images/footer/icon3.png">
+				<p>品质保障</p>
+			</div>
+			<div>
+				<img src="../images/footer/icon4.png">
+				<p>品质保障</p>
+			</div>
+		
+		
+		
+		</div>
+		
+		<!--8. 共用底部-->
+		<div id="bottom">
+			<div class="download">
+				<img src="../images/footer/erweima.png">
+			</div>
+			<div class="service">
+				<p>皮爷の商城客户端</p>
+				<img src="../images/footer/android.png">
+				<img src="../images/footer/ios.png">
+			</div>
+			<p>
+				<img src="../images/footer/logo.png" id="footLogo">
+			</p>
+			<p>
+				<img src="../images/footer/footerFont.png" id="footFont">
+			
+			</p>
+
+		
+		
+		
+		</div>
+
+	
+	
+	
+	</div>
+ </body>
+</html>

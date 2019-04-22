@@ -1,0 +1,134 @@
+#main h2{
+	color:#333;
+	font-size:20px;
+}
+#main h2>p{
+	float:right;
+	font-size:12px;
+	color:#666;
+}
+#main h2 span{
+	color:#997679;
+	font-size:14px;
+	padding:0 8px;
+}
+.title{
+	margin-top:10px;
+	height:36px;
+	border-top:1px solid gray;
+	box-shadow:0 2px 5px gray;
+	background:#e6e6e5;
+	color:#808080;
+	text-align:center;
+	line-height:36px;
+}
+#main p{
+	float:left;
+}
+.check{
+	width:52px;
+}
+.check img{
+	vertical-align:middle;
+}
+.goodsName{
+	width:380px;
+}
+.price{
+	width:152px;
+}
+.count{
+	width:150px;
+}
+.sum{
+	width:130px;
+}
+.action{
+	width:126px;
+}
+.content{
+	margin-top:10px;
+}
+.item{
+	height:115px;
+	background:#fff;
+	border-top:1px solid gray;
+	border-bottom:1px solid gray;
+	margin-bottom:10px;
+
+}
+.item .check{
+	text-align:center;
+	line-height:115px;
+}
+.item .goodsName{
+	height:115px;
+	box-sizing:border-box;
+	padding-top:15px;
+	border-right:1px solid gray;
+}
+.item .goodsName img{
+	width:84px;
+	height:84px;
+	float:left;
+	margin-right:10px;
+}
+.item .goodsName span{
+	float:left;
+	width:200px;
+	color:#333;
+}
+.item .goodsName .itemName{
+	margin:10px 0;
+}
+.item .price span{
+	float:left;
+	width:152px;
+	text-align:center;
+	color:#333;
+}
+.special{
+	color:#997679 !important;
+	font-weight:bold;
+	font-size:14px;
+	margin-top:40px;
+}
+.count a{
+	float:left;
+	width:26px;
+	height:26px;
+	border:1px solid gray;
+	background:#e8e8e8;
+	margin-top:40px;
+	color:#333;
+	text-align:center;
+	line-height:26px;
+}
+.count .decrement{
+	margin-left:35px;
+}
+.count input{
+	text-align:center;
+	margin-top:40px;
+	float:left;
+	width:26px;
+	height:26px;
+	border:1px solid gray;
+	border-left:none;
+	border-right:none;
+	padding:0;	
+}
+.item .sum,.item .action{
+	text-align:center;
+	line-height:115px;
+	color:#333;
+	font-size:14px;
+}
+.item .action a{
+	color:#333;
+}
+
+
+
+
+

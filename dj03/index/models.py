@@ -20,3 +20,17 @@ class Publisher(models.Model):
     country = models.CharField(max_length=50)
     website = models.URLField()
 
+
+class Author(models.Model):
+    name = models.CharField(max_length=50,db_index=True)
+    age = models.IntegerField()
+    email = models.EmailField(null=True)
+    isActive = models.BooleanField(default=True)
+
+
+class Book(models.Model):
+    title = models.CharField(max_length=100)
+    publicate_date = models.DateField()
+
+
+

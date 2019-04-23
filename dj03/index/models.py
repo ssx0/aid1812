@@ -14,23 +14,51 @@ from django.db import models
 #5.website:网址（字符串）
 
 class Publisher(models.Model):
-    name = models.CharField(max_length=30)
-    address = models.CharField(max_length=100)
-    city = models.CharField(max_length=50)
-    country = models.CharField(max_length=50)
-    website = models.URLField()
+    name = models.CharField(max_length=30,verbose_name="出版商")
+    address = models.CharField(max_length=100,verbose_name="地址")
+    city = models.CharField(max_length=50,verbose_name="城市")
+    country = models.CharField(max_length=50,verbose_name="国籍")
+    website = models.URLField(verbose_name="网站")
+
+    class Meta:
+        db_table = 'publisher'
+        verbose_name = '出版社'
+        verbose_name_plural = '出版商信息'
+
+    def __str__(self):
+        return self.name
+
 
 
 class Author(models.Model):
-    name = models.CharField(max_length=50,db_index=True)
-    age = models.IntegerField()
-    email = models.EmailField(null=True)
-    isActive = models.BooleanField(default=True)
+    name = models.CharField(max_length=50,db_index=True,verbose_name="姓名")
+    age = models.IntegerField(verbose_name="年龄")
+    email = models.EmailField(null=True,verbose_name="邮箱")
+    isActive = models.BooleanField(default=True,verbose_name="状态")
+
+    class Meta:
+        #数据表名
+        db_table = 'author'
+        #单数
+        verbose_name = '作者'
+        #复数
+        verbose_name_plural = '用户信息'
+
+    def __str__(self):
+        return self.name
 
 
 class Book(models.Model):
-    title = models.CharField(max_length=100)
-    publicate_date = models.DateField()
+    title = models.CharField(max_length=100,verbose_name="图书名称")
+    publicate_date = models.DateField(verbose_name="出版日期")
+
+    class Meta:
+        db_table = "book"
+        verbose_name = '著作'
+        verbose_name_plural = "书籍信息"
+
+    def __str__(self):
+        return self.title
 
 
 

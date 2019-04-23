@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>名单</title>
+    <style>
+        *{margin:0;padding:0;list-style: none;}
+        ul>span{
+            width: 200px;
+            height: 20px;
+            margin-left: 40px;
+            margin-right: 20px;
+        }
+        ul li{
+            margin-top: 10px;
+        }
+        ul li>span{
+            width: 100px;
+            margin-left: 45px;
+            margin-right: 20px;
+        }
+        ul span:last-child{
+            margin-left:-5px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <span>姓名</span>
+        <span>年龄</span>
+        <span>邮箱</span>
+        <span>操作</span>
+        {% for i in re %}
+        <li>
+            <span>
+                <a href="/06-ser/{{i.id}}">{{i.name}}</a>
+            </span>
+            <span>{{i.age}}</span>
+            <span>{{i.email}}</span>
+            <span><a>修改</a>&nbsp;&nbsp;&nbsp;<a href="/06-dele/{{i.id}}">删除</a></span>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

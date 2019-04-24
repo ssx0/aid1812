@@ -35,6 +35,7 @@ class Author(models.Model):
     age = models.IntegerField(verbose_name="年龄")
     email = models.EmailField(null=True,verbose_name="邮箱")
     isActive = models.BooleanField(default=True,verbose_name="状态")
+    publishers = models.ManyToManyField(Publisher)
 
     class Meta:
         #数据表名
@@ -51,6 +52,8 @@ class Author(models.Model):
 class Book(models.Model):
     title = models.CharField(max_length=100,verbose_name="图书名称")
     publicate_date = models.DateField(verbose_name="出版日期")
+    publisher = models.ForeignKey(Publisher,null=True,verbose_name="出版社")
+
 
     class Meta:
         db_table = "book"
@@ -60,5 +63,16 @@ class Book(models.Model):
     def __str__(self):
         return self.title
 
+
+class Wife(models.Model):
+    wname = models.CharField(max_length=30,verbose_name="w名称")
+    wage = models.IntegerField(verbose_name="w年龄")
+    author = models.OneToOneField(Author)
+
+    class Meta:
+        db_table = "wife"
+
+    def __str__(self):
+        return self.wname
 
 

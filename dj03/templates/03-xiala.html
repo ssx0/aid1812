@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书</title>
+    <script src="/static/js/jquery-1.11.3.js"></script>
+</head>
+<script>
+    $(function () {
+        $("#sse").change(function () {
+            location.href = "/07-bbb/"+this.value
+        })
+    })
+</script>
+<body>
+    <p>
+        <select id="sse">
+            <option value="0">－－＊－－</option>
+            {% for pu in pud %}
+            <option value="{{ pu.id}}"
+                    {% if id == pud.id %}
+                        selected
+                    {% endif %}
+            >{{ pu.name }}</option>
+            {% endfor %}
+        </select>
+    </p>
+    <div>
+        <table border="1" width="300">
+            <tr>
+                <th>书名</th>
+                <th>出版时间</th>
+            </tr>
+            {% for bo in book %}
+                <tr>
+                    <th>{{ bo.title }}</th>
+                    <th>{{ bo.publicate_date }}</th>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

@@ -28,3 +28,10 @@ urlpatterns +=[
     url(r'06-dele/(\d+)/$',views.dele),
     url(r'06-ffl/$',views.fl),
 ]
+urlpatterns +=[
+    url(r'07-oto/$',views.oto),
+    url(r'07-fkey/$',views.fkey),
+    url(r'07-bbb/(\d*)$',views.bbb),
+    url(r'000-ss/$',views.ss),
+    url(r'08-mtm/$',views.ttmt)
+]

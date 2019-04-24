@@ -205,4 +205,78 @@ def fl(request):
     Author.objects.all().update(age=F('age')-10)
     return HttpResponse("ok")
 
+def oto(request):
+    #1.1通过外键关联属性
+    # wife = Wife()
+    # wife.wname = "小未"
+    # wife.wage = "24"
+    # wife.author_id = 1
+    # wife.save()
 
+    #1.2通过关联属性关联数据
+    # autho = Author.objects.get(id=2)
+    # wife = Wife()
+    # wife.wname = '小夏'
+    # wife.wage = 24
+    # wife.author_id = autho.id
+    # wife.save()
+
+    #1.3查询小未对应Ａｕｔｈｏｒ信息
+    # wife = Wife.objects.get(wname='小未')
+    # qq = "%s %s %s"%(wife.wname,wife.wage,wife.author.name)
+
+    #1.4通过Author 对应 Wife
+    author = Author.objects.get(name='小天')
+    qq = "%s %s %s" % (author.name,author.wife.wname,author.wife.wage)
+
+    return HttpResponse(qq)
+
+def fkey(request):
+    # pud = Publisher.objects.get(id=1)
+    # book = Book.objects.get(title="xiaowan")
+    # book.publisher_id = pud.id
+    # book.save()
+    qq = ""
+    pud = Publisher.objects.get(id=1)
+    re = pud.book_set.all()
+    for i in re:
+        qq += "<p>%s %s</p>"%(i.title,i.publicate_date)
+    return HttpResponse(qq)
+
+def bbb(request,id):
+    pud = Publisher.objects.all()
+    book = Book.objects.all()
+    if id:
+        id = int(id)
+        if id > 0:
+             book = Book.objects.filter(publisher_id=id)
+
+    return render(request,'03-xiala.html',locals())
+
+def ss(request):
+    dic = r"""
+    qq = ''
+    author = Author.objects.get(id=4)
+    pubs = author.publishers.all()
+    qq += '<p>作者名称：　%s</p>'%author.name
+    qq += '<p>出版社有：</p>'
+    for i in pubs:
+        qq += '<p>出版商名称：　%s</p>' % i.name
+    """
+    return HttpResponse(dic)
+
+def ttmt(request):
+    #小王　与　联合社 关联在一起
+    # author = Author.objects.get(name="小王")
+    # publisher = Publisher.objects.get(name__endswith='联合社')
+    # author.publishers.add(publisher)
+
+    #查
+    qq = ""
+    author = Author.objects.get(id=4)
+    pubs = author.publishers.all()
+    qq += "<p>作者名称：　%s</p>"%author.name
+    qq += "<p>出版社有：</p>"
+    for i in pubs:
+        qq += "<p>出版商名称：　%s</p>" % i.name
+    return HttpResponse(qq)

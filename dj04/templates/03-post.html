@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>post提交</title>
+</head>
+<body>
+    <form action="/03-post/" method="post">
+        {% csrf_token %}
+        <p>
+            姓名：<input type="text" name="name">
+        </p>
+        <p>
+            年龄:<input type="text" name="age">
+        </p>
+        <input type="submit" >
+    </form>
+</body>
+</html>

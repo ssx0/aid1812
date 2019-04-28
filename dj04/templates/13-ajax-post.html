@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/static/js/jquery-1.11.3.js"></script>
+    <script>
+        $(function () {
+            $('#btn').click(function () {
+                var pr = {
+                    "uname":$('#name').val(),
+                    "upwd":$('#pwd').val(),
+                    'csrfmiddlewaretoken':$("[name='csrfmiddlewaretoken']")
+                };
+                $.post('/13-server/',pr,function (data) {
+                    alert(data)
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    {% csrf_token %}
+    <p> 名称：
+        <input type="text" id="name">
+    </p>
+    <p> 密码：
+        <input type="password" id="pwd">
+    </p>
+    <p>
+        <button id="btn">提交</button>
+    </p>
+
+</body>
+</html>

@@ -47,6 +47,14 @@ class LoginF(forms.ModelForm):
             'uname':'用户名',
             'upwd':'密码',
         }
+        widgets = {
+            'uname':forms.TextInput(
+                attrs={'placeholder':'请输入用户名',}
+            ),
+            'upwd':forms.PasswordInput(
+                attrs={'placeholder':'请输入用户密码',}
+            ),
+        }
 
 class LgW(forms.Form):
     uname = forms.CharField(

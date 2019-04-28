@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/static/js/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <button id="btn">发送请求</button>
+    <div id="show"></div>
+    <br/>
+    <button id="btnn">ajax请求</button>
+    <div id="sshow"></div>
+<script>
+    $(function () {
+       $("#btn").click(function () {
+           var pr = {
+               name:'小王',
+               age:20,
+           };
+          $.get('/12-server/',pr,function (data) {
+                $('#show').html(data);
+          });
+       });
+       $("#btnn").click(function () {
+           $.get('/13-json/',function (data) {
+               $('#sshow').html(data);
+          },'json');
+       });
+    });
+</script>
+</body>
+</html>

@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import *
 from .models import *
+import json
 # Create your views here.
 
 
@@ -104,3 +105,69 @@ def logfor_show(request):
     if request.method == 'GET':
         form = LgW()
         return render(request, '07-logfor.html', locals())
+
+def logincookie_show(request):
+    if request.method == 'GET':
+            return render(request,'08-logincookie.html')
+    elif request.method == 'POST':
+        name = request.POST.get('uname')
+        pwd = request.POST['upwd']
+        isA = request.POST.get('isA')
+        try:
+            ures = Users.objects.get(uname=name)
+        except:
+            return HttpResponse("用户名错误")
+        if pwd == ures.upwd:
+            print("!@@@")
+            ps = 0
+            if int(isA) == 1:
+                ps = 60 * 60 * 24 * 30
+            elif int(isA) == 2:
+                ps = 60 * 60 * 24 * 30 * 6
+            elif int(isA) == 3:
+                ps = 60 * 60 * 24 * 365
+            resp = HttpResponse("sss".encode())
+            n = str(name).encode('gbk')
+            p = str(pwd).encode('gbk')
+            resp.set_cookie('uname'.encode('gbk'),n,ps)
+            resp.set_cookie('upwd'.encode('gbk'),p,ps)
+            print("ss##")
+            return resp
+        return HttpResponse("密码错误")
+
+def setsess_show(request):
+    request.session['uname'] = 'xiaos'
+    request.session['upwd'] = '123'
+    return HttpResponse("hao")
+
+def getsess_show(request):
+    uname = request.session.get('uname',"UnKnown")
+    upwd = request.session.get('upwd', "UnKnown")
+    return HttpResponse("%s %s"%(uname,upwd))
+
+
+def server(request):
+    name = request.GET['name']
+    age = request.GET['age']
+    qq = "姓名:%s  年龄:%s"%(name,age)
+    return HttpResponse(qq)
+
+def json_show(request):
+    pr = {
+        'name':'小虾',
+        'age':20,
+        'gender':'male',
+        'email':'messa@12.com',
+    }
+    xl = json.dumps(pr)
+    print(xl)
+    return HttpResponse(xl)
+def ajaxpsot(request):
+    return render(request,'13-ajax-post.html')
+
+def server13(request):
+    uname = request.POST['uname']
+    upwd = request.POST['upwd']
+    pp = "%s %s"%(uname,upwd)
+    print("ss",uname,upwd)
+    return HttpResponse(pp)
